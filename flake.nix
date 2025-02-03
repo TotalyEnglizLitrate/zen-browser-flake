@@ -56,7 +56,7 @@
         sources = mkSources {version = "1.7.4b";};
       };
       experimental = {
-        version = "1.7.t";
+        version = "1.7.4t";
         sources = mkSources {
           version = "1.7.4t";
           isExperimental = true;
