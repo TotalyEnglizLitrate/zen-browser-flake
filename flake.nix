@@ -28,7 +28,7 @@
         }";
         hash = "sha256-${
           if isExperimental
-          then "jTO8RUlDde9k9FJJIdhF2QTiH0KKAKA0V3Crkn3CA/4="
+          then "5CUF/3bJhLefTzX033X4Xp42Dkil/uKpb955Wg4zMSk="
           else "p4UQg4zQaqJ4DOed0wXBOSg0HPz4fwqbXZtPuw0+S48="
         }";
       };
@@ -44,7 +44,7 @@
         }";
         hash = "sha256-${
           if isExperimental
-          then "CbT9WvjpHZxtX4/Ooje97F1UM9NFLv1p212NaOKpHv4="
+          then "Mj5P5C+0ZVlpUBLigVwFKuE6glVXQUERl44fwiYcDjA="
           else "LriVX7eQ2x9twi1ncB2lZkUo+RaAC8TqTWThUO+1opA="
         }";
       };
@@ -56,9 +56,9 @@
         sources = mkSources {version = "1.7.4b";};
       };
       experimental = {
-        version = "1.7.4t";
+        version = "1.7.5t";
         sources = mkSources {
-          version = "1.7.4t";
+          version = "1.7.5t";
           isExperimental = true;
         };
       };
