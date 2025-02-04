@@ -146,6 +146,8 @@
               ffmpeg
               libglvnd
               pipewire
+              gsettings-desktop-schemas
+              hicolor-icon-theme
             ]
             ++ (with pkgs.xorg; [
               libxcb
@@ -163,6 +165,20 @@
           sourceRoot = ".";
           dontBuild = true;
           dontConfigure = true;
+
+          preFixup = ''
+            for f in $(find $out/bin/ $out/libexec/ -type f -executable); do
+              wrapProgram "$f" \
+                --prefix XDG_DATA_DIRS : "$out/share" \
+                --prefix XDG_DATA_DIRS : "$out/share/gsettings-schemas/zen-browser" \
+                --prefix XDG_DATA_DIRS : "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}" \
+                --prefix XDG_DATA_DIRS : "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}" \
+                --prefix XDG_DATA_DIRS : "${pkgs.glib.out}/share/gsettings-schemas/${pkgs.glib.name}" \
+                --set GIO_EXTRA_MODULES "${pkgs.glib-networking}/lib/gio/modules" \
+                --prefix XDG_DATA_DIRS : "${pkgs.hicolor-icon-theme}/share" \
+                --set GDK_PIXBUF_MODULE_FILE "${pkgs.librsvg}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+            done
+          '';
 
           installPhase = ''
             set -e
