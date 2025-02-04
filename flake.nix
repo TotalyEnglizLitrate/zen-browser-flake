@@ -108,7 +108,6 @@
             pkgs.autoPatchelfHook
             pkgs.makeWrapper
             pkgs.copyDesktopItems
-            pkgs.glib
           ];
 
           buildInputs = with pkgs;
@@ -147,8 +146,6 @@
               ffmpeg
               libglvnd
               pipewire
-              gsettings-desktop-schemas
-              gtk3
             ]
             ++ (with pkgs.xorg; [
               libxcb
@@ -212,19 +209,6 @@
             # Disable updates
             mkdir -p $out/zen/distribution
             echo '{"policies": {"DisableAppUpdate": true}}' > $out/zen/distribution/policies.json
-          '';
-
-          postInstall = ''
-            # Install GSettings schemas
-            mkdir -p $out/share/gsettings-schemas/zen-browser
-            cp -r ${pkgs.gsettings-desktop-schemas}/share/glib-2.0/schemas $out/share/gsettings-schemas/zen-browser/
-
-            # Ensure GSettings schemas are compiled and recognized
-            ${pkgs.glib}/bin/glib-compile-schemas $out/share/gsettings-schemas/zen-browser/schemas
-
-            # Modify wrapper to include GSettings path
-            wrapProgram $out/bin/zen-browser \
-              --prefix XDG_DATA_DIRS : "$out/share/gsettings-schemas/zen-browser:${pkgs.gsettings-desktop-schemas}/share"
           '';
 
           meta = with pkgs.lib; {
