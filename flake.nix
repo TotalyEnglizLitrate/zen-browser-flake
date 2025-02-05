@@ -28,7 +28,7 @@
         }";
         hash = "sha256-${
           if isExperimental
-          then "5CUF/3bJhLefTzX033X4Xp42Dkil/uKpb955Wg4zMSk="
+          then "CA9YdAPDL1KnztNvAF32tR5Ufl6SD709w1CTG1WEE8w="
           else "p4UQg4zQaqJ4DOed0wXBOSg0HPz4fwqbXZtPuw0+S48="
         }";
       };
@@ -44,7 +44,7 @@
         }";
         hash = "sha256-${
           if isExperimental
-          then "Mj5P5C+0ZVlpUBLigVwFKuE6glVXQUERl44fwiYcDjA="
+          then "LYcSvaqPXYJs38yg5ApEGi/gg3WgpdDePBlLKJl/mK0="
           else "LriVX7eQ2x9twi1ncB2lZkUo+RaAC8TqTWThUO+1opA="
         }";
       };
