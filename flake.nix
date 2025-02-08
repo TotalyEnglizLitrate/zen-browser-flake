@@ -21,15 +21,11 @@
           if isExperimental
           then "twilight"
           else version
-        }/zen.linux-x86_64.tar.${
-          if isExperimental
-          then "xz"
-          else "bz2"
-        }";
+        }/zen.linux-x86_64.tar.xz";
         hash = "sha256-${
           if isExperimental
-          then "Dd+erIsJWPyNlm1NW8ym2EaY8h3d0Jlqc87FQK/+t+w="
-          else "p4UQg4zQaqJ4DOed0wXBOSg0HPz4fwqbXZtPuw0+S48="
+          then "Fas4Cfv92MqnqOsXS8NFJX8/ZuWI0sDq1d4Tla1Zx7c="
+          else "InhljDorCxmXD9OCagF2RUNU9Lq8hIhz6/TqR7TSZG4="
         }";
       };
       aarch64-linux = {
@@ -37,28 +33,24 @@
           if isExperimental
           then "twilight"
           else version
-        }/zen.linux-aarch64.tar.${
-          if isExperimental
-          then "xz"
-          else "bz2"
-        }";
+        }/zen.linux-aarch64.tar.xz";
         hash = "sha256-${
           if isExperimental
-          then "qhtgOO9gd+ZJmnY6mRRT8wxRfr1/tmAMEVCBLZrVPdk="
-          else "LriVX7eQ2x9twi1ncB2lZkUo+RaAC8TqTWThUO+1opA="
+          then "+NrnHNuwu+cQ96+PT3ZE2WLck35s8J0IqZStW/GI12Y="
+          else "mN/B9p13b3BSz7w5/dWwztGHYeKA/bvZe3x5hdGvffo="
         }";
       };
     };
 
     versions = {
       stable = {
-        version = "1.7.4b";
-        sources = mkSources {version = "1.7.4b";};
+        version = "1.7.6b";
+        sources = mkSources {version = versions.stable.version;};
       };
       experimental = {
-        version = "1.7.6t";
+        version = "1.7.7t";
         sources = mkSources {
-          version = "1.7.6t";
+          version = versions.experimental.version;
           isExperimental = true;
         };
       };
