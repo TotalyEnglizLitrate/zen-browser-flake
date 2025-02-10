@@ -7,7 +7,7 @@ In the current state of the flake each update would create a new profile, as a w
 ## Versions
 
 - Stable: 1.7.4b
-- Experimental: 1.7.6t
+- Experimental: 1.7.7t
 
 ## Supported Systems
 
