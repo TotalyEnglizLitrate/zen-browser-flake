@@ -2,7 +2,7 @@
   description = "Zen Browser - Performance-oriented Firefox-based web browser";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
   outputs = {
