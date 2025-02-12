@@ -24,7 +24,7 @@
         }/zen.linux-x86_64.tar.xz";
         hash = "sha256-${
           if isExperimental
-          then "wukoNchpQOw7frfT+QnHHIWsaMIvFzmIvvLoQI1i75Q="
+          then "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
           else "InhljDorCxmXD9OCagF2RUNU9Lq8hIhz6/TqR7TSZG4="
         }";
       };
@@ -36,7 +36,7 @@
         }/zen.linux-aarch64.tar.xz";
         hash = "sha256-${
           if isExperimental
-          then "8pUq+Hx/yzZ/nXZ2nFXa/j76PU9t3KOGiXTI5nV4lrg="
+          then "T5PkKDrL0HRIVUqenC+LVRa8hjE0YOkKJ+xHTkuPrpI="
           else "mN/B9p13b3BSz7w5/dWwztGHYeKA/bvZe3x5hdGvffo="
         }";
       };
