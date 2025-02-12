@@ -24,7 +24,7 @@
         }/zen.linux-x86_64.tar.xz";
         hash = "sha256-${
           if isExperimental
-          then "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          then "FhM16CwakDKzuutoVtzYhyPzqIOA+Hjfesr/2yeEklc="
           else "InhljDorCxmXD9OCagF2RUNU9Lq8hIhz6/TqR7TSZG4="
         }";
       };
