@@ -24,8 +24,8 @@
         }/zen.linux-x86_64.tar.xz";
         hash = "sha256-${
           if isExperimental
-          then "JhDQMEtxHWNjS5DD1YHYJFqU7o24tlnaR+U7G8RPGss="
-          else "InhljDorCxmXD9OCagF2RUNU9Lq8hIhz6/TqR7TSZG4="
+          then "lCQc1g8znxgSN6154jzHDtzcG25WRhcZxuuzD/UH1oc="
+          else "NCOgKsc64/6oEYa8x/PXK6ilE7t/CwovmouJHi+wMBg="
         }";
       };
       aarch64-linux = {
@@ -36,19 +36,19 @@
         }/zen.linux-aarch64.tar.xz";
         hash = "sha256-${
           if isExperimental
-          then "0AGJnt4Mw1IRc2G/ZVI0s8j9hxf1SljAgVMVswLAnAI="
-          else "mN/B9p13b3BSz7w5/dWwztGHYeKA/bvZe3x5hdGvffo="
+          then "hJbXS07nE/jajkJz2qvxsjLs9ChKkFAL0eX8bfOeTqQ="
+          else "iCm/+2ep0SV3XCkm7aYUj2hRiN+ShIK7pOtcYhOOgn0="
         }";
       };
     };
 
     versions = {
       stable = {
-        version = "1.7.6b";
+        version = "1.9.1b";
         sources = mkSources {version = versions.stable.version;};
       };
       experimental = {
-        version = "1.7.7t";
+        version = "1.9.1t";
         sources = mkSources {
           version = versions.experimental.version;
           isExperimental = true;
